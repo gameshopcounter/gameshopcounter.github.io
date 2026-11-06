@@ -1,0 +1,1265 @@
+{
+  "version": 2,
+  "fixtures": [
+    {
+      "type": "wallShelf",
+      "uid": "f11ixk",
+      "label": "NEW ARRIVALS",
+      "sign": "blue",
+      "x": -5.725,
+      "z": 2.7,
+      "rotY": 1.5707963267948966,
+      "length": 5.4,
+      "wood": "wood",
+      "depth": 0.55,
+      "height": 2.3,
+      "tiers": 6,
+      "corner": "new-arrivals"
+    },
+    {
+      "type": "wallShelf",
+      "uid": "f2nbdj",
+      "label": "INDIE",
+      "sign": "green",
+      "x": -5.725,
+      "z": -3.4,
+      "rotY": 1.5707963267948966,
+      "length": 4.2,
+      "wood": "wood",
+      "depth": 0.55,
+      "height": 2.3,
+      "tiers": 6,
+      "corner": "indie"
+    },
+    {
+      "type": "wallShelf",
+      "uid": "f3eymm",
+      "label": "SALE",
+      "sign": "amber",
+      "x": 5.725,
+      "z": 2.7,
+      "rotY": -1.5707963267948966,
+      "length": 5.4,
+      "wood": "wood",
+      "depth": 0.55,
+      "height": 2.3,
+      "tiers": 6,
+      "corner": "sale"
+    },
+    {
+      "type": "wallShelf",
+      "uid": "f4ffl8",
+      "label": "RPG",
+      "sign": "purple",
+      "x": 5.725,
+      "z": -4,
+      "rotY": -1.5707963267948966,
+      "length": 5.4,
+      "wood": "wood",
+      "depth": 0.55,
+      "height": 2.3,
+      "tiers": 6,
+      "corner": "rpg"
+    },
+    {
+      "type": "wallShelf",
+      "uid": "f5wvj0",
+      "label": "HORROR",
+      "sign": "red",
+      "x": 3.2,
+      "z": -7.1,
+      "rotY": 0,
+      "length": 4.3,
+      "wood": "woodDark",
+      "depth": 0.55,
+      "height": 2.3,
+      "tiers": 6,
+      "corner": "horror"
+    },
+    {
+      "type": "gondola",
+      "uid": "f6zchx",
+      "label": "RETRO",
+      "sign": "blue",
+      "x": -2.5,
+      "z": -0.9,
+      "rotY": 1.5707963267948966,
+      "length": 5.6,
+      "depth": 0.9,
+      "height": 1.85,
+      "tiers": 5,
+      "wood": "wood",
+      "corner": "retro"
+    },
+    {
+      "type": "gondola",
+      "uid": "f7y554",
+      "label": "ACTION",
+      "sign": "blue",
+      "x": 2.4,
+      "z": -0.9,
+      "rotY": -1.5707963267948966,
+      "length": 5.6,
+      "depth": 0.9,
+      "height": 1.85,
+      "tiers": 5,
+      "wood": "wood",
+      "corner": "action"
+    },
+    {
+      "type": "island",
+      "uid": "fa58oc",
+      "label": "RECOMMENDED",
+      "sign": "amber",
+      "x": 0,
+      "z": 3.9,
+      "rotY": 1.5707963267948966,
+      "length": 2.6,
+      "width": 1.3,
+      "height": 1.15,
+      "tiers": 3,
+      "corner": "recommended"
+    },
+    {
+      "type": "bargainBin",
+      "uid": "fbcd6w",
+      "x": -0.05,
+      "z": -0.9,
+      "width": 1.2,
+      "length": 1.8,
+      "height": 0.78,
+      "corner": "bargain"
+    },
+    {
+      "type": "pillar",
+      "uid": "fccl0n",
+      "x": -2.5,
+      "z": -3.97,
+      "size": 0.44
+    },
+    {
+      "type": "pillar",
+      "uid": "fda8gr",
+      "x": 2.4,
+      "z": -3.97,
+      "size": 0.44
+    },
+    {
+      "type": "poster",
+      "uid": "fe1873",
+      "x": -5.95,
+      "y": 1.62,
+      "z": -0.65,
+      "rotY": 1.5707963267948966,
+      "w": 0.72,
+      "h": 1,
+      "seed": 1
+    },
+    {
+      "type": "poster",
+      "uid": "ff0w9a",
+      "x": -5.95,
+      "y": 1.7,
+      "z": 6.4,
+      "rotY": 1.5707963267948966,
+      "w": 0.66,
+      "h": 0.92,
+      "seed": 4
+    },
+    {
+      "type": "poster",
+      "uid": "fgkjww",
+      "x": 5.95,
+      "y": 1.62,
+      "z": -0.65,
+      "rotY": -1.5707963267948966,
+      "w": 0.72,
+      "h": 1,
+      "seed": 2
+    },
+    {
+      "type": "poster",
+      "uid": "fivzo6",
+      "x": -4.6,
+      "y": 2.25,
+      "z": -7.42,
+      "rotY": 0,
+      "w": 0.78,
+      "h": 1.08,
+      "seed": 3
+    },
+    {
+      "type": "poster",
+      "uid": "fj2u6x",
+      "x": -2.2,
+      "y": 2.3,
+      "z": -7.42,
+      "rotY": 0,
+      "w": 0.62,
+      "h": 0.78,
+      "seed": 9,
+      "kind": "notice"
+    },
+    {
+      "type": "poster",
+      "uid": "fkg9go",
+      "x": 0.55,
+      "y": 2.25,
+      "z": -7.42,
+      "rotY": 0,
+      "w": 0.7,
+      "h": 0.98,
+      "seed": 6
+    },
+    {
+      "type": "poster",
+      "uid": "fmo9kz",
+      "x": 2.4,
+      "y": 1.12,
+      "z": 1.96,
+      "rotY": 0,
+      "w": 0.58,
+      "h": 0.82,
+      "seed": 11
+    },
+    {
+      "type": "poster",
+      "uid": "fny3eb",
+      "x": -2.5,
+      "y": 1.55,
+      "z": -4.23,
+      "rotY": 3.141592653589793,
+      "w": 0.42,
+      "h": 0.6,
+      "seed": 12
+    },
+    {
+      "type": "poster",
+      "uid": "fop9vx",
+      "x": 2.4,
+      "y": 1.55,
+      "z": -4.23,
+      "rotY": 3.141592653589793,
+      "w": 0.42,
+      "h": 0.6,
+      "seed": 13
+    },
+    {
+      "type": "poster",
+      "uid": "fp7yng",
+      "x": -5,
+      "y": 1.75,
+      "z": 7.32,
+      "rotY": 3.141592653589793,
+      "w": 0.7,
+      "h": 0.98,
+      "seed": 7
+    },
+    {
+      "type": "poster",
+      "uid": "fqj43i",
+      "x": 5,
+      "y": 1.75,
+      "z": 7.32,
+      "rotY": 3.141592653589793,
+      "w": 0.7,
+      "h": 0.98,
+      "seed": 8
+    },
+    {
+      "type": "cardboard",
+      "uid": "fru9qb",
+      "x": -5.1,
+      "y": 0,
+      "z": -7,
+      "rotY": 0.22,
+      "w": 0.52,
+      "h": 0.42,
+      "d": 0.46
+    },
+    {
+      "type": "cardboard",
+      "uid": "fsrsmv",
+      "x": -5,
+      "y": 0.42,
+      "z": -6.92,
+      "rotY": -0.14,
+      "w": 0.44,
+      "h": 0.36,
+      "d": 0.4
+    },
+    {
+      "type": "cardboard",
+      "uid": "ftueu6",
+      "x": 1.8,
+      "y": 0,
+      "z": 4.3,
+      "rotY": 0.15,
+      "w": 0.56,
+      "h": 0.46,
+      "d": 0.5
+    },
+    {
+      "type": "cardboard",
+      "uid": "fuhh0h",
+      "x": -1.35,
+      "y": 0,
+      "z": -6.6,
+      "rotY": 0.1,
+      "w": 0.48,
+      "h": 0.4,
+      "d": 0.44
+    },
+    {
+      "type": "plant",
+      "uid": "fvehfq",
+      "x": -5.3,
+      "y": 0,
+      "z": 6.85,
+      "scale": 1
+    },
+    {
+      "type": "plant",
+      "uid": "fwgzhm",
+      "x": 4.7,
+      "y": 0,
+      "z": 7.12,
+      "scale": 0.9
+    },
+    {
+      "type": "plant",
+      "uid": "fxkp9o",
+      "x": 0,
+      "y": 0,
+      "z": -2.3,
+      "scale": 1.05
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "fy4jh8",
+      "x": -3.7,
+      "z": -6.2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "fzhoux",
+      "x": 0,
+      "z": -6.2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f108tjn",
+      "x": 3.7,
+      "z": -6.2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f11whq4",
+      "x": -3.7,
+      "z": -3.1
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f12d0zs",
+      "x": 0,
+      "z": -3.1
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f137x22",
+      "x": 3.7,
+      "z": -3.1
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f14t4hf",
+      "x": -3.7,
+      "z": 0
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f15h0zk",
+      "x": 0,
+      "z": 0
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f16u8ia",
+      "x": 3.7,
+      "z": 0
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f178zso",
+      "x": -3.7,
+      "z": 3.1
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f187w75",
+      "x": 0,
+      "z": 3.1
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f19uc3x",
+      "x": 3.7,
+      "z": 3.1
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f1ajl7r",
+      "x": -3.7,
+      "z": 6.2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f1bjn29",
+      "x": 0,
+      "z": 6.2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f1c7t13",
+      "x": 3.7,
+      "z": 6.2
+    },
+    {
+      "type": "pointLight",
+      "uid": "f1dh3xd",
+      "x": 0,
+      "z": 6.2,
+      "color": 16767400,
+      "intensity": 11,
+      "distance": 9.5
+    },
+    {
+      "type": "pointLight",
+      "uid": "f1edp76",
+      "x": -3.7,
+      "z": 3.1,
+      "color": 16766112,
+      "intensity": 12,
+      "distance": 9.5
+    },
+    {
+      "type": "pointLight",
+      "uid": "f1fdupn",
+      "x": 3.7,
+      "z": 3.1,
+      "color": 16766112,
+      "intensity": 12,
+      "distance": 9.5
+    },
+    {
+      "type": "pointLight",
+      "uid": "f1gmzzm",
+      "x": 0,
+      "z": 0,
+      "color": 16767406,
+      "intensity": 10,
+      "distance": 9
+    },
+    {
+      "type": "pointLight",
+      "uid": "f1hg6fx",
+      "x": -3.7,
+      "z": -3.1,
+      "color": 16765088,
+      "intensity": 12,
+      "distance": 9.5
+    },
+    {
+      "type": "pointLight",
+      "uid": "f1ibzj6",
+      "x": 3.7,
+      "z": -3.1,
+      "color": 16763802,
+      "intensity": 9,
+      "distance": 8.5
+    },
+    {
+      "type": "pointLight",
+      "uid": "f1j2q9i",
+      "x": -3.7,
+      "z": -6.2,
+      "color": 16769208,
+      "intensity": 12,
+      "distance": 9
+    },
+    {
+      "type": "pointLight",
+      "uid": "f1k6wzu",
+      "id": "flicker",
+      "x": 3.7,
+      "z": -6.2,
+      "color": 8369344,
+      "intensity": 4.5,
+      "distance": 7
+    },
+    {
+      "type": "zone",
+      "uid": "f1lb3u1",
+      "label": "NEW ARRIVALS",
+      "minX": -6,
+      "maxX": -3.2,
+      "minZ": -0.4,
+      "maxZ": 5.8
+    },
+    {
+      "type": "zone",
+      "uid": "f1meh9s",
+      "label": "INDIE",
+      "minX": -6,
+      "maxX": -3.2,
+      "minZ": -7,
+      "maxZ": -1
+    },
+    {
+      "type": "zone",
+      "uid": "f1np13l",
+      "label": "SALE",
+      "minX": 3.2,
+      "maxX": 6,
+      "minZ": -0.4,
+      "maxZ": 5.8
+    },
+    {
+      "type": "zone",
+      "uid": "f1or6r2",
+      "label": "RPG",
+      "minX": 3.2,
+      "maxX": 6,
+      "minZ": -7,
+      "maxZ": -1
+    },
+    {
+      "type": "zone",
+      "uid": "f1ptfri",
+      "label": "HORROR",
+      "minX": 1.1,
+      "maxX": 6,
+      "minZ": -7.5,
+      "maxZ": -5.2
+    },
+    {
+      "type": "zone",
+      "uid": "f1q9gzc",
+      "label": "COUNTER",
+      "minX": -6,
+      "maxX": 1,
+      "minZ": -7.5,
+      "maxZ": -5.2
+    },
+    {
+      "type": "zone",
+      "uid": "f1rgyuy",
+      "label": "RECOMMENDED",
+      "minX": -2,
+      "maxX": 2,
+      "minZ": 2.6,
+      "maxZ": 6.4
+    },
+    {
+      "type": "zone",
+      "uid": "f1ss5lm",
+      "label": "RETRO / ACTION",
+      "minX": -2,
+      "maxX": 2,
+      "minZ": -3.4,
+      "maxZ": 2.6
+    },
+    {
+      "type": "counter",
+      "uid": "f1t1ldz",
+      "x0": -6,
+      "x1": 1,
+      "z0": -6.5,
+      "z1": -5.65,
+      "height": 1.05
+    },
+    {
+      "type": "clerk",
+      "uid": "f1vl076",
+      "x": -1.6,
+      "z": -6.95,
+      "rotY": 0
+    },
+    {
+      "type": "doorMat",
+      "uid": "f1wxpax",
+      "x": 0,
+      "z": 6.55,
+      "w": 2.2,
+      "d": 1.3
+    },
+    {
+      "type": "flickerFixture",
+      "uid": "f1x5v5s",
+      "x": 3.7,
+      "z": -6.2
+    },
+    {
+      "type": "spawn",
+      "uid": "f1yxa2e",
+      "x": 0,
+      "z": 6,
+      "yaw": 0
+    },
+    {
+      "type": "room",
+      "uid": "f1f7s9",
+      "width": 12,
+      "depth": 15,
+      "height": 3.2
+    },
+    {
+      "type": "wallShelf",
+      "uid": "f23knfl",
+      "label": "IMPORT",
+      "sign": "purple",
+      "x": -5.725,
+      "z": 1.6,
+      "rotY": 1.5707963267948966,
+      "length": 6.6,
+      "depth": 0.55,
+      "height": 2.3,
+      "tiers": 6,
+      "wood": "wood",
+      "floor": 2,
+      "corner": "f2-import"
+    },
+    {
+      "type": "wallShelf",
+      "uid": "f24l226",
+      "label": "DOUJIN",
+      "sign": "green",
+      "x": 5.725,
+      "z": 3.1,
+      "rotY": -1.5707963267948966,
+      "length": 4.4,
+      "depth": 0.55,
+      "height": 2.3,
+      "tiers": 6,
+      "wood": "wood",
+      "floor": 2,
+      "corner": "f2-doujin"
+    },
+    {
+      "type": "wallShelf",
+      "uid": "f25t616",
+      "label": "DOUJIN",
+      "sign": "green",
+      "x": 5.7,
+      "z": -4.4,
+      "rotY": -1.5707963267948966,
+      "length": 4.1,
+      "depth": 0.55,
+      "height": 2.3,
+      "tiers": 6,
+      "wood": "wood",
+      "floor": 2,
+      "corner": "f2-doujin"
+    },
+    {
+      "type": "wallShelf",
+      "uid": "f26j4cm",
+      "label": "JUNK",
+      "sign": "red",
+      "x": -3,
+      "z": 7.225,
+      "rotY": 3.141592653589793,
+      "length": 4.6,
+      "depth": 0.55,
+      "height": 2.3,
+      "tiers": 6,
+      "wood": "woodDark",
+      "floor": 2,
+      "corner": "f2-junk"
+    },
+    {
+      "type": "wallShelf",
+      "uid": "f27m4eo",
+      "label": "JUNK",
+      "sign": "red",
+      "x": 3,
+      "z": 7.225,
+      "rotY": 3.141592653589793,
+      "length": 4.6,
+      "depth": 0.55,
+      "height": 2.3,
+      "tiers": 6,
+      "wood": "woodDark",
+      "floor": 2,
+      "corner": "f2-junk"
+    },
+    {
+      "type": "wallShelf",
+      "uid": "f28s23a",
+      "label": "ADULT 18+",
+      "sign": "red",
+      "x": -5.725,
+      "z": -5.35,
+      "rotY": 1.5707963267948966,
+      "length": 2.9,
+      "depth": 0.55,
+      "height": 2.3,
+      "tiers": 6,
+      "wood": "woodDark",
+      "floor": 2,
+      "corner": "f2-adult"
+    },
+    {
+      "type": "wallShelf",
+      "uid": "f29p4z5",
+      "label": "18+",
+      "sign": "red",
+      "x": -4.05,
+      "z": -7.225,
+      "rotY": 0,
+      "length": 2.5,
+      "depth": 0.55,
+      "height": 2.3,
+      "tiers": 6,
+      "wood": "woodDark",
+      "floor": 2,
+      "corner": "f2-adult"
+    },
+    {
+      "type": "wallShelf",
+      "uid": "f2ardmk",
+      "label": "18+",
+      "sign": "red",
+      "x": -2.33,
+      "z": -5.5,
+      "rotY": -1.5707963267948966,
+      "length": 2.7,
+      "depth": 0.55,
+      "height": 2.3,
+      "tiers": 6,
+      "wood": "woodDark",
+      "floor": 2,
+      "corner": "f2-adult"
+    },
+    {
+      "type": "gondola",
+      "uid": "f2bwfod",
+      "label": "BUDGET",
+      "sign": "blue",
+      "x": -1.4,
+      "z": 1.6,
+      "rotY": 1.5707963267948966,
+      "length": 5,
+      "depth": 0.9,
+      "height": 1.85,
+      "tiers": 5,
+      "wood": "wood",
+      "floor": 2,
+      "corner": "f2-budget"
+    },
+    {
+      "type": "gondola",
+      "uid": "f2cm2lm",
+      "label": "FREE",
+      "sign": "green",
+      "x": 1.9,
+      "z": 1.6,
+      "rotY": 1.5707963267948966,
+      "length": 5,
+      "depth": 0.9,
+      "height": 1.85,
+      "tiers": 5,
+      "wood": "wood",
+      "floor": 2,
+      "corner": "f2-free"
+    },
+    {
+      "type": "gondola",
+      "uid": "f2dryiq",
+      "label": "CLASSICS",
+      "sign": "amber",
+      "x": 4,
+      "z": -7,
+      "rotY": 0,
+      "length": 2.2,
+      "depth": 0.9,
+      "height": 2.3,
+      "tiers": 5,
+      "wood": "woodDark",
+      "floor": 2,
+      "corner": "f2-classic"
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f2ejk8v",
+      "x": -4,
+      "z": -5.6,
+      "floor": 2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f2fezli",
+      "x": -0.2,
+      "z": -5.6,
+      "floor": 2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f2gvho4",
+      "x": 3.4,
+      "z": -5.6,
+      "floor": 2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f2hguwa",
+      "x": -3.6,
+      "z": -1.4,
+      "floor": 2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f2i5fgr",
+      "x": 0.3,
+      "z": -1.4,
+      "floor": 2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f2jxib5",
+      "x": 3.8,
+      "z": -1.4,
+      "floor": 2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f2k0lre",
+      "x": -3.6,
+      "z": 2.2,
+      "floor": 2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f2lz7pw",
+      "x": 0.3,
+      "z": 2.2,
+      "floor": 2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f2m9bw6",
+      "x": 3.8,
+      "z": 2.2,
+      "floor": 2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f2nz2b7",
+      "x": -3.6,
+      "z": 5.6,
+      "floor": 2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f2o4vj4",
+      "x": 0.3,
+      "z": 5.6,
+      "floor": 2
+    },
+    {
+      "type": "ceilingFixture",
+      "uid": "f2pqara",
+      "x": 3.8,
+      "z": 5.6,
+      "floor": 2
+    },
+    {
+      "type": "pointLight",
+      "uid": "f2qj55e",
+      "x": -4,
+      "z": -5.6,
+      "color": 16757688,
+      "intensity": 9,
+      "distance": 7,
+      "floor": 2
+    },
+    {
+      "type": "pointLight",
+      "uid": "f2rfe1m",
+      "x": 1.4,
+      "z": -5.6,
+      "color": 16767400,
+      "intensity": 11,
+      "distance": 9,
+      "floor": 2
+    },
+    {
+      "type": "pointLight",
+      "uid": "f2sp161",
+      "x": 4.4,
+      "z": -1.4,
+      "color": 16767400,
+      "intensity": 10,
+      "distance": 9,
+      "floor": 2
+    },
+    {
+      "type": "pointLight",
+      "uid": "f2thuvz",
+      "x": -3.4,
+      "z": -0.6,
+      "color": 16767400,
+      "intensity": 10,
+      "distance": 9,
+      "floor": 2
+    },
+    {
+      "type": "pointLight",
+      "uid": "f2ufndu",
+      "x": 0.3,
+      "z": 1.8,
+      "color": 16767400,
+      "intensity": 11,
+      "distance": 9.5,
+      "floor": 2
+    },
+    {
+      "type": "pointLight",
+      "uid": "f2vpjip",
+      "x": 4,
+      "z": 3.4,
+      "color": 16767400,
+      "intensity": 10,
+      "distance": 9,
+      "floor": 2
+    },
+    {
+      "type": "pointLight",
+      "uid": "f2w1tsy",
+      "x": -3.6,
+      "z": 4.4,
+      "color": 16767400,
+      "intensity": 10,
+      "distance": 9,
+      "floor": 2
+    },
+    {
+      "type": "pointLight",
+      "uid": "f2xqzsa",
+      "x": 0.6,
+      "z": 6,
+      "color": 16767400,
+      "intensity": 10,
+      "distance": 9,
+      "floor": 2
+    },
+    {
+      "type": "plant",
+      "uid": "f2yfrkf",
+      "x": 0,
+      "y": 0,
+      "z": 6.55,
+      "scale": 0.9,
+      "floor": 2
+    },
+    {
+      "type": "plant",
+      "uid": "f2z9se7",
+      "x": 5.55,
+      "y": 0,
+      "z": 0.45,
+      "scale": 0.85,
+      "floor": 2
+    },
+    {
+      "type": "zone",
+      "uid": "f315tea",
+      "label": "2F  ADULT 18+",
+      "minX": -6,
+      "maxX": -2,
+      "minZ": -7.5,
+      "maxZ": -3.5,
+      "floor": 2
+    },
+    {
+      "type": "zone",
+      "uid": "f32gi4q",
+      "label": "2F  IMPORT",
+      "minX": -6,
+      "maxX": -3.2,
+      "minZ": -3.5,
+      "maxZ": 5.6,
+      "floor": 2
+    },
+    {
+      "type": "zone",
+      "uid": "f339ezw",
+      "label": "2F  COUNTER",
+      "minX": -2,
+      "maxX": 6,
+      "minZ": -7.5,
+      "maxZ": -5.4,
+      "floor": 2
+    },
+    {
+      "type": "zone",
+      "uid": "f34nke9",
+      "label": "2F  CLASSICS",
+      "minX": -0.2,
+      "maxX": 2.6,
+      "minZ": -5,
+      "maxZ": -2.2,
+      "floor": 2
+    },
+    {
+      "type": "zone",
+      "uid": "f35f4qu",
+      "label": "2F  DOUJIN",
+      "minX": 3.2,
+      "maxX": 6,
+      "minZ": -5.4,
+      "maxZ": 5.6,
+      "floor": 2
+    },
+    {
+      "type": "zone",
+      "uid": "f368qee",
+      "label": "2F  JUNK",
+      "minX": -6,
+      "maxX": 6,
+      "minZ": 5.6,
+      "maxZ": 7.5,
+      "floor": 2
+    },
+    {
+      "type": "zone",
+      "uid": "f37k48i",
+      "label": "2F  BUDGET",
+      "minX": -3.2,
+      "maxX": 0.25,
+      "minZ": -5.4,
+      "maxZ": 5.6,
+      "floor": 2
+    },
+    {
+      "type": "zone",
+      "uid": "f3free1",
+      "label": "2F  FREE",
+      "minX": 0.25,
+      "maxX": 3.2,
+      "minZ": -5.4,
+      "maxZ": 5.6,
+      "floor": 2
+    },
+    {
+      "type": "counter",
+      "uid": "f38zi1j",
+      "x0": -2,
+      "x1": 2.4,
+      "z0": -6.5,
+      "z1": -5.65,
+      "height": 1.05,
+      "floor": 2
+    },
+    {
+      "type": "clerk",
+      "uid": "f39sr6w",
+      "x": 0.25,
+      "z": -6.85,
+      "rotY": 0,
+      "floor": 2
+    },
+    {
+      "type": "wagon",
+      "uid": "f3aq6i7",
+      "x": 0.4,
+      "z": -3.7,
+      "floor": 2,
+      "d": 1,
+      "w": 2,
+      "count": 12
+    },
+    {
+      "type": "kiosk",
+      "uid": "f1vzmff",
+      "floor": 1,
+      "x": -2.55,
+      "z": 2.3,
+      "rotY": 0,
+      "label": "TRAILER"
+    },
+    {
+      "type": "kiosk",
+      "uid": "f1wgo47",
+      "floor": 2,
+      "x": -1.4,
+      "z": -1.4,
+      "rotY": -3.1416,
+      "label": "TRAILER"
+    },
+    {
+      "type": "spinner",
+      "uid": "fsp3m2",
+      "floor": 1,
+      "x": 0,
+      "z": 1.5,
+      "rotY": 0
+    },
+    {
+      "type": "spinner",
+      "uid": "fsp4q9",
+      "floor": 2,
+      "x": -1.2,
+      "z": -3.7,
+      "rotY": 0
+    },
+    {
+      "type": "ladder",
+      "uid": "f1x7a0c",
+      "floor": 1,
+      "x": 4.6,
+      "z": -6.3,
+      "rotY": 1.5707963267948966
+    },
+    {
+      "type": "ladder",
+      "uid": "f1ygiki",
+      "floor": 2,
+      "x": 4.9,
+      "z": 4.4,
+      "rotY": 1.5707963267948966
+    },
+    {
+      "type": "prop",
+      "uid": "fob1a7",
+      "floor": 1,
+      "kind": "openBox",
+      "x": -5.3,
+      "z": -0.65,
+      "rotY": 1.7
+    },
+    {
+      "type": "prop",
+      "uid": "fob2c3",
+      "floor": 2,
+      "kind": "openBox",
+      "x": -5.25,
+      "z": 5.9,
+      "rotY": 1.95
+    },
+    {
+      "type": "prop",
+      "uid": "fbs1k4",
+      "floor": 1,
+      "kind": "basketStack",
+      "x": -1.85,
+      "z": 7.1,
+      "rotY": 3.141592653589793
+    },
+    {
+      "type": "prop",
+      "uid": "fcl1m9",
+      "floor": 1,
+      "kind": "cleaning",
+      "x": 5.47,
+      "z": 7.27,
+      "rotY": 3.141592653589793
+    },
+    {
+      "type": "poster",
+      "uid": "fsh9p1",
+      "floor": 1,
+      "kind": "shop",
+      "x": -1.6,
+      "y": 1.55,
+      "z": 7.42,
+      "rotY": 3.141592653589793,
+      "w": 0.46,
+      "h": 0.65,
+      "seed": 14
+    },
+    {
+      "type": "poster",
+      "uid": "fsh9p2",
+      "floor": 1,
+      "kind": "shop",
+      "x": -0.85,
+      "y": 1.85,
+      "z": -7.42,
+      "rotY": 0,
+      "w": 0.46,
+      "h": 0.65,
+      "seed": 14
+    },
+    {
+      "type": "poster",
+      "uid": "fsh9p3",
+      "floor": 2,
+      "kind": "shop",
+      "x": -0.75,
+      "y": 1.85,
+      "z": -7.42,
+      "rotY": 0,
+      "w": 0.46,
+      "h": 0.65,
+      "seed": 14
+    },
+    {
+      "type": "prop",
+      "uid": "ftr1a1",
+      "floor": 1,
+      "kind": "trashcan",
+      "x": 1.45,
+      "z": -5.3,
+      "rotY": 0
+    },
+    {
+      "type": "prop",
+      "uid": "ftr2b2",
+      "floor": 2,
+      "kind": "trashcan",
+      "x": 2.8,
+      "z": -5.3,
+      "rotY": 0
+    },
+    {
+      "type": "prop",
+      "uid": "ftr3c3",
+      "floor": 1,
+      "kind": "trashcan",
+      "x": 3.55,
+      "z": 7.18,
+      "rotY": 3.141592653589793
+    },
+    {
+      "type": "poster",
+      "uid": "fck8m2",
+      "floor": 1,
+      "kind": "cork",
+      "x": -5.95,
+      "y": 1.6,
+      "z": -6.75,
+      "rotY": 1.5707963267948966,
+      "w": 0.62,
+      "h": 0.5,
+      "seed": 1
+    }
+  ],
+  "capacity": {
+    "horror": 126,
+    "sale": 171,
+    "new-arrivals": 144,
+    "indie": 108,
+    "rpg": 144,
+    "retro": 240,
+    "action": 240,
+    "recommended": 78,
+    "f2-import": 186,
+    "f2-doujin": 240,
+    "f2-junk": 264,
+    "f2-adult": 216,
+    "f2-budget": 200,
+    "f2-classic": 100,
+    "f2-free": 200
+  }
+}

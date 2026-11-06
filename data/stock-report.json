@@ -1,0 +1,263 @@
+{
+  "note": "毎朝の入れ替えで、店の中の作品が何本あって何本入れ替わったか（scripts/stock-report.mjs）。数だけで、作品の名前は入れない。history は新しい順",
+  "latest": {
+    "date": "2026-11-07",
+    "store": {
+      "total": 2846,
+      "kept": 1807,
+      "added": 1039,
+      "removed": 1024
+    },
+    "sections": {
+      "games": {
+        "label": "1階の棚",
+        "total": 1177,
+        "kept": 766,
+        "added": 411,
+        "removed": 400
+      },
+      "floor2": {
+        "label": "2階の棚",
+        "total": 1190,
+        "kept": 697,
+        "added": 493,
+        "removed": 491
+      },
+      "unsold": {
+        "label": "ワゴン（まだレビューがない）",
+        "total": 160,
+        "kept": 124,
+        "added": 36,
+        "removed": 36
+      },
+      "adult": {
+        "label": "成人向けコーナー",
+        "total": 320,
+        "kept": 197,
+        "added": 123,
+        "removed": 123
+      },
+      "upcoming": {
+        "label": "発売予定のポスター",
+        "total": 80,
+        "kept": 42,
+        "added": 38,
+        "removed": 38
+      }
+    },
+    "corners": [
+      {
+        "id": "recommended",
+        "name": "おすすめ",
+        "total": 78,
+        "kept": 54,
+        "added": 24,
+        "removed": 24,
+        "moved": 10
+      },
+      {
+        "id": "sale",
+        "name": "セール",
+        "total": 171,
+        "kept": 120,
+        "added": 51,
+        "removed": 51,
+        "moved": 11
+      },
+      {
+        "id": "new-arrivals",
+        "name": "新作",
+        "total": 144,
+        "kept": 102,
+        "added": 42,
+        "removed": 42,
+        "moved": 5
+      },
+      {
+        "id": "horror",
+        "name": "ホラー",
+        "total": 126,
+        "kept": 71,
+        "added": 55,
+        "removed": 55,
+        "moved": 6
+      },
+      {
+        "id": "retro",
+        "name": "レトロ",
+        "total": 166,
+        "kept": 86,
+        "added": 80,
+        "removed": 69,
+        "moved": 2
+      },
+      {
+        "id": "rpg",
+        "name": "RPG",
+        "total": 144,
+        "kept": 86,
+        "added": 58,
+        "removed": 58,
+        "moved": 8
+      },
+      {
+        "id": "indie",
+        "name": "インディー",
+        "total": 108,
+        "kept": 61,
+        "added": 47,
+        "removed": 47,
+        "moved": 5
+      },
+      {
+        "id": "action",
+        "name": "アクション",
+        "total": 240,
+        "kept": 127,
+        "added": 113,
+        "removed": 113,
+        "moved": 12
+      }
+    ]
+  },
+  "history": [
+    {
+      "date": "2026-11-07",
+      "store": {
+        "total": 2846,
+        "kept": 1807,
+        "added": 1039,
+        "removed": 1024
+      },
+      "sections": {
+        "games": {
+          "label": "1階の棚",
+          "total": 1177,
+          "kept": 766,
+          "added": 411,
+          "removed": 400
+        },
+        "floor2": {
+          "label": "2階の棚",
+          "total": 1190,
+          "kept": 697,
+          "added": 493,
+          "removed": 491
+        },
+        "unsold": {
+          "label": "ワゴン（まだレビューがない）",
+          "total": 160,
+          "kept": 124,
+          "added": 36,
+          "removed": 36
+        },
+        "adult": {
+          "label": "成人向けコーナー",
+          "total": 320,
+          "kept": 197,
+          "added": 123,
+          "removed": 123
+        },
+        "upcoming": {
+          "label": "発売予定のポスター",
+          "total": 80,
+          "kept": 42,
+          "added": 38,
+          "removed": 38
+        }
+      }
+    },
+    {
+      "date": "2026-11-06",
+      "store": {
+        "total": 2831,
+        "kept": 1800,
+        "added": 1031,
+        "removed": 1034
+      },
+      "sections": {
+        "games": {
+          "label": "1階の棚",
+          "total": 1166,
+          "kept": 746,
+          "added": 420,
+          "removed": 419
+        },
+        "floor2": {
+          "label": "2階の棚",
+          "total": 1188,
+          "kept": 712,
+          "added": 476,
+          "removed": 478
+        },
+        "unsold": {
+          "label": "ワゴン（まだレビューがない）",
+          "total": 160,
+          "kept": 110,
+          "added": 50,
+          "removed": 50
+        },
+        "adult": {
+          "label": "成人向けコーナー",
+          "total": 320,
+          "kept": 211,
+          "added": 109,
+          "removed": 109
+        },
+        "upcoming": {
+          "label": "発売予定のポスター",
+          "total": 80,
+          "kept": 40,
+          "added": 40,
+          "removed": 40
+        }
+      }
+    },
+    {
+      "date": "2026-11-05",
+      "store": {
+        "total": 2834,
+        "kept": 1221,
+        "added": 1613,
+        "removed": 1643
+      },
+      "sections": {
+        "games": {
+          "label": "1階の棚",
+          "total": 1165,
+          "kept": 508,
+          "added": 657,
+          "removed": 691
+        },
+        "floor2": {
+          "label": "2階の棚",
+          "total": 1190,
+          "kept": 524,
+          "added": 666,
+          "removed": 661
+        },
+        "unsold": {
+          "label": "ワゴン（まだレビューがない）",
+          "total": 160,
+          "kept": 0,
+          "added": 160,
+          "removed": 160
+        },
+        "adult": {
+          "label": "成人向けコーナー",
+          "total": 320,
+          "kept": 166,
+          "added": 154,
+          "removed": 154
+        },
+        "upcoming": {
+          "label": "発売予定のポスター",
+          "total": 80,
+          "kept": 41,
+          "added": 39,
+          "removed": 39
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "note": "店から外す作品（取り下げの依頼があったとき）。appids に Steam の作品の番号（ストアのURLの /app/ の後ろの数字）、developers に開発元の名前（Steam の表記のまま。大文字・小文字は区別しない）を足す。集め直すとき（build-catalog.mjs・fetch-upcoming.mjs）とお店を開くとき（games.js）の両方で外す。memo は自分用のメモ（いつ・だれから・なぜ）で、店では使わない",
+  "appids": [],
+  "developers": [],
+  "memo": []
+}
