@@ -1,0 +1,253 @@
+{
+  "version": 1,
+  "note": "コーナーの集め方（店づくりの画面の「コーナー」で編集する）。上から順に、先に作品を選ぶ。scripts/build-catalog.mjs がこれを読んで作品を集める。決まりの意味は src/corners-rules.js",
+  "corners": [
+    {
+      "id": "f2-free",
+      "name": "無料",
+      "sign": "FREE",
+      "color": "green",
+      "floor": 2,
+      "cut": "context",
+      "rule": {
+        "source": "all",
+        "price": "free",
+        "fill": "empty"
+      }
+    },
+    {
+      "id": "recommended",
+      "name": "おすすめ",
+      "sign": "RECOMMENDED",
+      "color": "amber",
+      "floor": 1,
+      "cut": "context",
+      "rule": {
+        "source": "top",
+        "tags": [],
+        "tagMode": "any",
+        "rating": "93",
+        "reviews": [
+          "mid",
+          "many"
+        ],
+        "price": "any",
+        "sale": false,
+        "release": "any",
+        "language": "any",
+        "maker": "any",
+        "hidden": 0,
+        "fill": "relax"
+      }
+    },
+    {
+      "id": "sale",
+      "name": "セール",
+      "sign": "SALE",
+      "color": "amber",
+      "floor": 1,
+      "cut": "context",
+      "rule": {
+        "source": "sale",
+        "sale": true
+      }
+    },
+    {
+      "id": "new-arrivals",
+      "name": "新作",
+      "sign": "NEW ARRIVALS",
+      "color": "blue",
+      "floor": 1,
+      "cut": "context",
+      "rule": {
+        "source": "new",
+        "tags": [],
+        "tagMode": "any",
+        "rating": "any",
+        "reviews": [],
+        "price": "any",
+        "sale": false,
+        "release": "2m",
+        "language": "any",
+        "maker": "any",
+        "hidden": 0,
+        "fill": "relax"
+      }
+    },
+    {
+      "id": "horror",
+      "name": "ホラー",
+      "sign": "HORROR",
+      "color": "red",
+      "floor": 1,
+      "cut": "genre",
+      "rule": {
+        "source": "top",
+        "tags": [
+          1667
+        ]
+      }
+    },
+    {
+      "id": "retro",
+      "name": "レトロ",
+      "sign": "RETRO",
+      "color": "blue",
+      "floor": 1,
+      "cut": "genre",
+      "rule": {
+        "source": "top",
+        "tags": [
+          1693,
+          4004
+        ]
+      }
+    },
+    {
+      "id": "rpg",
+      "name": "RPG",
+      "sign": "RPG",
+      "color": "purple",
+      "floor": 1,
+      "cut": "genre",
+      "rule": {
+        "source": "top",
+        "tags": [
+          122
+        ]
+      }
+    },
+    {
+      "id": "indie",
+      "name": "インディー",
+      "sign": "INDIE",
+      "color": "green",
+      "floor": 1,
+      "cut": "genre",
+      "rule": {
+        "source": "top",
+        "tags": [
+          492
+        ]
+      }
+    },
+    {
+      "id": "action",
+      "name": "アクション",
+      "sign": "ACTION",
+      "color": "blue",
+      "floor": 1,
+      "cut": "genre",
+      "rule": {
+        "source": "top",
+        "tags": [
+          19
+        ]
+      }
+    },
+    {
+      "id": "f2-classic",
+      "name": "クラシック",
+      "sign": "CLASSICS",
+      "color": "amber",
+      "floor": 2,
+      "cut": "context",
+      "rule": {
+        "source": "all",
+        "tags": [],
+        "tagMode": "any",
+        "rating": "85",
+        "reviews": [
+          "few",
+          "mid",
+          "many"
+        ],
+        "price": "any",
+        "sale": false,
+        "release": "until2015",
+        "language": "any",
+        "maker": "any",
+        "hidden": 0,
+        "fill": "relax"
+      }
+    },
+    {
+      "id": "f2-doujin",
+      "name": "同人",
+      "sign": "DOUJIN",
+      "color": "green",
+      "floor": 2,
+      "cut": "discovery",
+      "rule": {
+        "source": "all",
+        "tags": [],
+        "tagMode": "any",
+        "rating": "any",
+        "reviews": [],
+        "price": "any",
+        "sale": false,
+        "release": "any",
+        "language": "any",
+        "maker": "jpsmall",
+        "hidden": 0,
+        "fill": "relax"
+      }
+    },
+    {
+      "id": "f2-import",
+      "name": "輸入盤",
+      "sign": "IMPORT",
+      "color": "purple",
+      "floor": 2,
+      "cut": "discovery",
+      "rule": {
+        "source": "all",
+        "language": "noja"
+      }
+    },
+    {
+      "id": "f2-junk",
+      "name": "ジャンク",
+      "sign": "JUNK",
+      "color": "red",
+      "floor": 2,
+      "cut": "discovery",
+      "rule": {
+        "source": "all",
+        "rating": "low"
+      }
+    },
+    {
+      "id": "f2-budget",
+      "name": "500円以下",
+      "sign": "BUDGET",
+      "color": "blue",
+      "floor": 2,
+      "cut": "discovery",
+      "rule": {
+        "source": "all",
+        "price": "u500"
+      }
+    },
+    {
+      "id": "f2-adult",
+      "name": "成人向け",
+      "sign": "ADULT 18+",
+      "color": "red",
+      "floor": 2,
+      "cut": "special",
+      "special": "adult",
+      "rule": {}
+    },
+    {
+      "id": "unsold",
+      "name": "まだレビューがない",
+      "sign": "WAGON",
+      "color": "amber",
+      "floor": 2,
+      "cut": "special",
+      "special": "unsold",
+      "rule": {}
+    }
+  ]
+}
