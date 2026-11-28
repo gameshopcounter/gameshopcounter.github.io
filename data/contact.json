@@ -1,0 +1,5 @@
+{
+  "note": "取り下げ・お問い合わせの連絡先。タイトル画面とメニューの注意書きの下に出す（どちらも空なら出さない）。email はメールアドレス、x は X のユーザー名（@ は付けても付けなくてもよい。DM で受け付ける）",
+  "email": "gameshop.counter@gmail.com",
+  "x": "gameshopcounter"
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="あなたが素敵なゲームと出会えますように。歩いて棚を見て回る、小さな PC ゲームショップ。" />
+    <meta name="theme-color" content="#0d1117" />
+    <!-- X などに店の URL を貼ったときに出るカード（絵は public/og.png。公開中の店のタイトル画面を撮ったもの） -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gameshopcounter.github.io/" />
+    <meta property="og:title" content="GAME SHOP" />
+    <meta property="og:description" content="あなたが素敵なゲームと出会えますように。歩いて棚を見て回る、小さな PC ゲームショップ。" />
+    <meta property="og:image" content="https://gameshopcounter.github.io/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GAME SHOP" />
+    <meta name="twitter:description" content="あなたが素敵なゲームと出会えますように。歩いて棚を見て回る、小さな PC ゲームショップ。" />
+    <meta name="twitter:image" content="https://gameshopcounter.github.io/og.png" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%231b2430'/%3E%3Crect x='2' y='3' width='4' height='10' fill='%23d8734a'/%3E%3Crect x='7' y='3' width='4' height='10' fill='%235fa8d8'/%3E%3Crect x='12' y='3' width='2' height='10' fill='%23e0c060'/%3E%3C/svg%3E"
+    />
+    <title>GAME SHOP</title>
+    <script type="module" crossorigin src="./assets/index-DaDCFC9O.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CBC4fSMn.css">
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene"></canvas>
+
+      <!-- ===== 照準（ポインタロック中のみ表示） ===== -->
+      <div id="crosshair" class="hidden" aria-hidden="true"></div>
+
+      <!-- ===== 照準に商品を合わせたときのプロンプト ===== -->
+      <div id="prompt" class="hidden" aria-live="polite">
+        <span id="prompt-title" class="prompt-title"></span>
+        <span id="prompt-where" class="prompt-where" hidden></span>
+        <span class="prompt-action"><span id="prompt-key" class="key">E</span><span id="prompt-action-label">調べる</span></span>
+      </div>
+
+      <!-- ===== 店員の独り言 ===== -->
+      <div id="speech" class="speech" aria-live="polite"></div>
+
+      <!-- ===== 店員との会話（文字送り） ===== -->
+      <div id="talk" class="speech talk" aria-live="polite">
+        <span class="talk-name">店員</span>
+        <p class="talk-line"><span class="talk-text"></span><span class="talk-rest" aria-hidden="true"></span></p>
+        <div class="talk-choices" hidden></div>
+        <span class="talk-next" aria-hidden="true">▼</span>
+      </div>
+
+      <!-- ===== カゴを覗いているときの説明 ===== -->
+      <div id="basket-panel" class="basket-panel panel" hidden>
+        <p id="basket-title" class="basket-title"></p>
+        <p id="basket-price" class="basket-price"></p>
+        <p class="basket-meta"><span id="basket-pos"></span><span id="basket-total"></span></p>
+        <p class="basket-hints">
+          <span><span class="key" data-en="Wheel">ホイール</span><span data-en="Choose">選ぶ</span></span>
+          <span><span class="key" data-en="Click">クリック</span><span data-en="Look at the back">裏を見る</span></span>
+          <span><span class="key">R</span><span data-en="Put back">棚に戻す</span></span>
+          <span><span class="key">Tab</span><span data-en="Close">閉じる</span></span>
+        </p>
+      </div>
+
+      <!-- ===== 財布を開いているときの説明 ===== -->
+      <div id="wallet-panel" class="basket-panel panel" hidden>
+        <p id="wallet-title" class="basket-title"></p>
+        <p id="wallet-sub" class="basket-price"></p>
+        <p class="basket-meta"><span id="wallet-pos"></span></p>
+        <p class="basket-hints">
+          <span class="wallet-has"><span class="key" data-en="Wheel">ホイール</span><span data-en="Flip">めくる</span></span>
+          <span class="wallet-has"><span class="key" data-en="Click">クリック</span><span data-en="Read">詳しく見る</span></span>
+          <span class="wallet-has"><span class="key">Q</span><span data-en="Photo with phone">ケータイで撮る</span></span>
+          <span><span class="key">F</span><span data-en="Close">閉じる</span></span>
+        </p>
+      </div>
+
+      <!-- ===== 常設HUD ===== -->
+      <div id="hud" class="hidden">
+        <!-- 持ち物（左下に縦に並べる。常に表示し、数と開くキーを添える） -->
+        <div class="inventory-hud">
+          <div id="hud-basket" class="inv-item"><span data-en="Basket: ">カゴを確認：</span><span class="inv-key">Tab</span></div>
+          <div id="hud-wallet" class="inv-item"><span data-en="Wallet: ">財布を開く：</span><span class="inv-key">F</span></div>
+          <div id="hud-phone" class="inv-item"><span data-en="Phone: ">ケータイ：</span><span class="inv-key">Q</span></div>
+        </div>
+        <!-- ケータイの横の操作の案内（phone.js / main.js の updatePhoneGuide） -->
+        <div id="phone-guide" class="phone-guide" aria-hidden="true"></div>
+      </div>
+
+      <!-- ===== 起動オーバーレイ ===== -->
+      <div id="overlay-start" class="overlay">
+        <div class="vignette" aria-hidden="true"></div>
+        <div class="start-inner">
+          <!-- 看板：天井から2本の線で吊るした、紺のプレート（店内のコーナー名の看板と同じ作り） -->
+          <div class="start-sign">
+            <p class="start-sign-sub">PC SOFTWARE</p>
+            <h1 class="title">GAME SHOP</h1>
+          </div>
+          <p class="subtitle" data-en="I hope you meet a wonderful game.">あなたが素敵なゲームと出会えますように</p>
+          <button id="btn-enter" class="start-button" type="button" data-en="Enter the shop">店に入る</button>
+          <!-- 言語の切り替え（i18n.js。メニューにも同じもの） -->
+          <div class="lang-switch start-lang" role="group" aria-label="言語 / Language">
+            <button type="button" data-lang="ja">日本語</button><button type="button" data-lang="en">English</button>
+          </div>
+          <!-- 裏で表紙を並べている進み具合（待たずに入ってもよい） -->
+          <p id="start-prefetch" class="start-prefetch" aria-live="polite"></p>
+        </div>
+        <!-- 権利と購入についての注意書き（遊ぶ前に目に入るよう、画面の下に小さく。Esc メニューにも同じ文） -->
+        <p class="start-legal">
+          <span data-en-html="This is an unofficial fan-made work and is not affiliated with Steam or with the developers or publishers of any game.<br />Shopping in the store (basket, checkout, receipts) is only for fun: nothing is actually bought or paid for. Prices are as of when they were fetched and may differ from the current ones. Please check the Steam store before buying.<br />Game titles, package images, descriptions and videos belong to their respective owners. Images and videos are shown from Steam.">本作は非公式のファンメイド作品で、Steam および各ゲームの開発元・販売元とは関係ありません。<br />
+          店内での買い物（カゴ・会計・レシート）は演出で、実際の購入や支払いは発生しません。価格は取得した時点のもので、実際とは異なる場合があります。購入の前に Steam のストアでお確かめください。<br />
+          作品名・パッケージ画像・紹介文・映像の権利は、それぞれの権利者に帰属します。画像と映像は Steam から表示しています。</span>
+
+          <span class="legal-analytics" data-en="We count our visitors to keep the staff motivated (we can't tell who you are, and no cookies are used).">来店の数を数えて、店員の励みにしています（どなたが来たかはわかりません・クッキーは使いません）。</span>
+          <span class="legal-contact" hidden></span>
+        </p>
+      </div>
+
+      <!-- ===== 商品詳細 ===== -->
+      <div id="overlay-detail" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+        <div class="detail panel">
+          <button id="detail-close" class="detail-close" type="button" aria-label="閉じる" data-en-aria="Close">×</button>
+
+          <div class="detail-body">
+            <div class="detail-cover">
+              <img id="detail-cover-img" alt="" />
+            </div>
+
+            <div class="detail-info">
+              <h2 id="detail-title" class="detail-title"></h2>
+              <p id="detail-meta" class="detail-meta"></p>
+              <p id="detail-price" class="detail-price" hidden></p>
+              <p id="detail-desc" class="detail-desc"></p>
+              <ul id="detail-genres" class="genre-chips"></ul>
+              <div class="detail-actions">
+              <button id="detail-basket" class="basket-button" type="button">
+                <span class="key">E</span><span id="detail-basket-label">カゴに入れる</span>
+              </button>
+              <!-- PC の Steam アプリでストアページを開く（ログイン済みなので、そのままウィッシュリストやカートへ） -->
+              <a id="detail-steam" class="steam-button" href="#">
+                <span data-en="Open in Steam">Steamアプリで開く</span> <span class="ext" aria-hidden="true">↗</span>
+              </a>
+              <!-- Steam アプリが入っていない人のための、目立たない控え -->
+              <a
+                id="detail-steam-web"
+                class="steam-web-link"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-en="Open in browser"
+              >ブラウザで開く</a>
+              </div>
+              <p id="detail-media-hint" class="detail-media-hint" hidden data-en="Click a photo on the back to see videos and images">裏面の写真をクリックで、動画・画像を見る</p>
+            </div>
+          </div>
+
+          <p class="detail-hint"><span class="key">Esc</span><span data-en="Close">閉じる</span></p>
+        </div>
+      </div>
+
+      <!-- ===== 動画・画像を見る画面（Steam のトレーラーとスクリーンショット。パッケージの裏面の写真をクリックすると、詳細カードの上に、画面の中央に出す） ===== -->
+      <div id="overlay-media" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="media-title">
+        <div class="media-box">
+          <div class="media-head">
+            <h2 id="media-title" class="media-title"></h2>
+            <span id="media-name" class="media-name"></span>
+            <button id="media-close" class="media-close" type="button" aria-label="閉じる" data-en-aria="Close">×</button>
+          </div>
+          <div class="media-screen">
+            <video id="media-video" controls playsinline preload="none" hidden></video>
+            <img id="media-image" class="media-image" alt="" hidden />
+            <button id="media-prev" class="media-nav prev" type="button" aria-label="前へ" data-en-aria="Previous">‹</button>
+            <button id="media-next" class="media-nav next" type="button" aria-label="次へ" data-en-aria="Next">›</button>
+            <p id="media-status" class="media-status" hidden></p>
+          </div>
+          <div id="media-strip" class="media-strip"></div>
+          <div class="media-foot">
+            <span id="media-count" class="media-count"></span>
+            <span class="media-hint"><span class="key">←</span><span class="key">→</span><span data-en="Browse  ">送る　</span><span class="key">Esc</span><span data-en="Close">閉じる</span></span>
+            <a id="media-steam" class="media-steam" href="#" target="_blank" rel="noopener noreferrer" data-en="View on Steam ↗">Steam で見る ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 2階の成人向けコーナーの扉の前：年齢の確認（T9） ===== -->
+      <div id="overlay-age" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="age-title">
+        <div class="age panel">
+          <p class="age-mark">18</p>
+          <h2 id="age-title" class="age-title" data-en="Adults-only section ahead">この先は成人向けのコーナーです</h2>
+          <p class="age-text" data-en-html="You must be 18 or older to enter.<br />Are you 18 or older?">18歳未満の方は入れません。<br />18歳以上ですか？</p>
+          <div class="age-actions">
+            <button id="age-yes" class="age-yes" type="button" data-en="I'm 18 or older, enter">18歳以上なので入る</button>
+            <button id="age-no" class="age-no" type="button" data-en="Go back">戻る</button>
+          </div>
+          <p class="age-hint"><span class="key">Esc</span><span data-en="Go back">戻る</span></p>
+        </div>
+      </div>
+
+      <!-- ===== ポーズ / 設定メニュー ===== -->
+      <div id="overlay-pause" class="overlay hidden">
+        <div class="panel menu">
+          <div class="menu-sheet">
+          <h2 class="menu-title">MENU</h2>
+
+          <h3 class="menu-group" data-en="Controls">操作</h3>
+          <ul class="start-controls menu-controls">
+            <li><span class="key">W A S D</span><span data-en="Move">移動</span></li>
+            <li><span class="key">Shift</span><span data-en="Walk fast">早歩き</span></li>
+            <li><span class="key">C</span><span data-en="Crouch">しゃがむ</span></li>
+            <li><span class="key">E</span><span data-en="Look / Talk">調べる・話しかける</span></li>
+            <li><span class="key">Tab</span><span data-en="Basket (checkout)">カゴ（レジで会計）</span></li>
+            <li><span class="key">F</span><span data-en="Wallet (receipts)">財布（レシート）</span></li>
+            <li><span class="key">Q</span><span data-en="Phone (camera)">ケータイ（カメラ）</span></li>
+            <li><span class="key">Esc</span><span data-en="Menu">メニュー</span></li>
+          </ul>
+
+          <h3 class="menu-group" data-en="Display">表示</h3>
+          <div class="menu-section">
+            <div class="row">
+              <span>言語 / Language</span>
+              <div class="lang-switch menu-lang" role="group" aria-label="言語 / Language">
+                <button type="button" data-lang="ja">日本語</button><button type="button" data-lang="en">English</button>
+              </div>
+            </div>
+            <label class="row" for="opt-fullscreen">
+              <span data-en="Full screen">全画面表示</span>
+              <input type="checkbox" id="opt-fullscreen" />
+            </label>
+
+            <label class="row" for="opt-store-art">
+              <span data-en="Use Steam store images">Steamのストア画像を使う</span>
+              <input type="checkbox" id="opt-store-art" />
+            </label>
+          </div>
+
+          <h3 class="menu-group" data-en="Sound">サウンド</h3>
+          <div class="menu-section">
+            <label class="row" for="opt-muted">
+              <span data-en="Mute">消音</span>
+              <input type="checkbox" id="opt-muted" />
+            </label>
+            <label class="row" for="opt-music-vol">
+              <span data-en="Music volume">BGM音量</span>
+              <input type="range" id="opt-music-vol" min="0" max="100" step="1" />
+            </label>
+            <label class="row" for="opt-sfx-vol">
+              <span data-en="Sound effects volume">効果音音量</span>
+              <input type="range" id="opt-sfx-vol" min="0" max="100" step="1" />
+            </label>
+          </div>
+
+          <button id="btn-resume" class="enter-button" type="button" data-en="Back to the shop">探索に戻る</button>
+          <p class="menu-footer" data-en="Settings are saved in this browser">設定はブラウザに保存されます</p>
+          <p class="menu-legal">
+            <span data-en-html="This is an unofficial fan-made work and is not affiliated with Steam or with the developers or publishers of any game.<br />Shopping in the store (basket, checkout, receipts) is only for fun: nothing is actually bought or paid for. Prices are as of when they were fetched and may differ from the current ones. Please check the Steam store before buying.<br />Game titles, package images, descriptions and videos belong to their respective owners. Images and videos are shown from Steam.">本作は非公式のファンメイド作品で、Steam および各ゲームの開発元・販売元とは関係ありません。<br />
+            店内での買い物（カゴ・会計・レシート）は演出で、実際の購入や支払いは発生しません。価格は取得した時点のもので、実際とは異なる場合があります。購入の前に Steam のストアでお確かめください。<br />
+            作品名・パッケージ画像・紹介文・映像の権利は、それぞれの権利者に帰属します。画像と映像は Steam から表示しています。</span>
+
+            <span class="legal-analytics" data-en="We count our visitors to keep the staff motivated (we can't tell who you are, and no cookies are used).">来店の数を数えて、店員の励みにしています（どなたが来たかはわかりません・クッキーは使いません）。</span>
+          <span class="legal-contact" hidden></span>
+          </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== レシート（会計のあと／Escメニューの「これまでのレシート」） ===== -->
+      <div id="overlay-receipt" class="overlay hidden" role="dialog" aria-modal="true" aria-label="レシート" data-en-aria="Receipt">
+        <div class="receipt-stage">
+          <!-- 1枚のレシート -->
+          <div id="receipt-view" class="receipt-view">
+            <div id="receipt-paper" class="receipt-paper"></div>
+            <div class="receipt-actions">
+              <button id="receipt-close" class="receipt-button" type="button" data-en="Close">閉じる</button>
+            </div>
+            <p id="receipt-note" class="receipt-note" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== 読み込み中 ===== -->
+      <div id="overlay-loading" class="overlay">
+        <div class="loading-inner">
+          <div class="loading-bar"><span></span></div>
+          <p data-en="Getting the shop ready…">開店の準備をしています…</p>
+        </div>
+      </div>
+
+      <!-- ===== WebGL非対応 ===== -->
+      <noscript>
+        <div class="overlay"><div class="panel">
+          このページの表示にはJavaScriptが必要です。 / This page needs JavaScript.
+        </div></div>
+      </noscript>
+    </div>
+
+    <!-- ===== スマホで開いたとき：店先の貼り紙（entry.js。店そのものは読み込まない） ===== -->
+    <div id="overlay-phone" class="phone-notice" hidden>
+      <div class="phone-inner">
+        <div class="start-sign phone-sign">
+          <p class="start-sign-sub">PC SOFTWARE</p>
+          <p class="title">GAME SHOP</p>
+        </div>
+        <div class="phone-paper" role="note">
+          <p class="phone-paper-head" data-en="To our customers">お客さまへ</p>
+          <p data-en-html="This shop is meant to be visited<br />from a computer browser.">当店は、パソコンのブラウザから<br />入っていただくお店です。</p>
+          <p class="phone-paper-small" data-en="(You can't walk around the store on a phone.)">（スマートフォンでは、店内を歩けません）</p>
+          <p data-en-html="Please open this page on a computer.<br />We'll be waiting for you.">パソコンで、このページを開いてください。<br />お待ちしています。</p>
+          <p class="phone-paper-sign" data-en="— Register, 1F">1階 レジ係</p>
+        </div>
+        <div class="phone-actions">
+          <p id="phone-url" class="phone-url">https://gameshopcounter.github.io/</p>
+          <button id="phone-copy" class="phone-button" type="button" data-en="Copy the URL">URL をコピー</button>
+          <button id="phone-share" class="phone-button phone-button-sub" type="button" hidden data-en="Send or save the URL">URL を送る・保存する</button>
+        </div>
+        <div class="lang-switch phone-lang" role="group" aria-label="言語 / Language">
+          <button type="button" data-lang="ja">日本語</button><button type="button" data-lang="en">English</button>
+        </div>
+        <p class="phone-legal" data-en="An unofficial fan-made work, not affiliated with Steam or any game's developers.">非公式のファンメイド作品です。Steam および各ゲームの開発元とは関係ありません。</p>
+      </div>
+    </div>
+
+  </body>
+</html>

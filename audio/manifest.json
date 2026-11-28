@@ -1,0 +1,11 @@
+{
+  "note": "音はすべて src/audio.js が Web Audio API で合成しています（footstep / footstepRun はタイル、footstepMat は入口のマット）。実ファイルに差し替えたい場合は、public/audio/ にファイルを置いて下のパスを書き換えてください（例: \"bgm\": \"audio/shop-theme.ogg\"）。null のままなら合成音を使います。仮音源は同梱していません。",
+  "bgm": null,
+  "footstep": null,
+  "footstepRun": null,
+  "footstepMat": null,
+  "pickup": null,
+  "putback": null,
+  "select": null,
+  "uiClick": null
+}
